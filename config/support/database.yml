@@ -1,0 +1,23 @@
+shared: &shared
+  adapter: mysql2
+  encoding: utf8
+  reconnect: true
+  pool: 5
+  username: root
+  password: password
+
+development:
+  <<: *shared
+  database: %{database}_%{current_user}_development
+
+production:
+  <<: *shared
+  database: %{database}
+
+sandbox:
+  <<: *shared
+  database: %{database}_sandbox
+
+test:
+  <<: *shared
+  database: %{database}_%{current_user}_test
