@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -8,9 +9,9 @@
 # from scratch. The latter is a flawed and unsustainable approach (the more migrations
 # you'll amass, the slower it'll run and the greater likelihood for issues).
 #
-# It's strongly recommended to check this file into your version control system.
+# It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150818215249) do
+ActiveRecord::Schema.define(version: 20160604074223) do
 
   create_table "accounts", force: :cascade do |t|
     t.string   "email",           limit: 255, null: false
@@ -20,5 +21,11 @@ ActiveRecord::Schema.define(version: 20150818215249) do
   end
 
   add_index "accounts", ["email"], name: "index_accounts_on_email", using: :btree
+
+  create_table "admins", force: :cascade do |t|
+    t.integer "account_id", limit: 4, null: false
+  end
+
+  add_index "admins", ["account_id"], name: "index_admins_on_account_id", unique: true, using: :btree
 
 end

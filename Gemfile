@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'admin_engine', '1.0.1'
 gem 'globals', '1.0.1'
 gem 'haml', '4.0.7'
 gem 'haml-rails', '0.9.0'
