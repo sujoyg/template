@@ -10,6 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 0) do
+ActiveRecord::Schema.define(version: 20150818215249) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string   "email",           limit: 255, null: false
+    t.string   "password_digest", limit: 255
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "accounts", ["email"], name: "index_accounts_on_email", using: :btree
 
 end
