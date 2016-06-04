@@ -1,0 +1,19 @@
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial";
+  margin: 0;
+}
+
+div {
+  // Ensures that specified size is actual size, including padding and border, rather than just content size.
+  box-sizing: border-box;
+  padding: 0;
+}
+
+img {
+  // Default inline style adds space at the bottom for 'suspenders', screwing up size calculations.
+  display: block;
+}
+
+textarea {
+  height: 100px;
+}

@@ -1,0 +1,38 @@
+#header {
+  height: 52px;
+  width: 100%;
+  min-width: 800px;
+
+  background-color: #f9f9f9;
+  box-shadow: 0px 2px 2px -2px rgba(0, 0, 0, 0.5);
+
+  .content {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 800px;
+
+    .logo {
+      float: left;
+
+      img {
+        padding: 2px;
+        height: 48px;
+        width: 48px;
+      }
+    }
+
+    .name {
+      float: left;
+      font-size: 28px;
+      margin-left: 8px;
+      line-height: 52px;
+    }
+  }
+}
+
+#content {
+  margin: 10px auto;
+  position: relative;
+  width: 800px;
+  height: 100%;
+}

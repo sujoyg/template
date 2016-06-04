@@ -1,11 +1,7 @@
-!!!DOCTYPE html
-%html
-  %head
-    %title= page_title
-    = stylesheet_link_tag 'application', :media => 'all'
-    = page_css
-    = javascript_include_tag 'application'
-    = page_javascript
-    = csrf_meta_tags
-  %body
+- content_for :content do
+  = render partial: 'layouts/header'
+  - if flash[:alert]
+    = flash[:alert]
+  #content
     = yield
+= render template: 'layouts/base'
