@@ -2,4 +2,8 @@
   .content
     .logo= image_tag 'logo.png'
     .name= $globals.app
-
+    .controls
+      - if current_account
+        = link_to 'Logout', logout_path(redirect: root_path)
+      - else
+        = render partial: 'shared/login'

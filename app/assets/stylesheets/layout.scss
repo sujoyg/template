@@ -27,6 +27,62 @@
       margin-left: 8px;
       line-height: 52px;
     }
+
+    .controls {
+      float: right;
+      overflow: hidden;
+
+      a {
+        font: {
+          size: 15px;
+        }
+
+        line-height: 40px;
+        padding: 6px;
+      }
+
+      form {
+        position: relative;
+        width: 400px;
+
+        input, label {
+          position: absolute;
+          box-sizing: border-box;
+          width: 150px;
+        }
+
+        label {
+          font-size: 12px;
+          height: 16px;
+          top: 4px;
+        }
+
+        input {
+          top: 20px;
+        }
+
+        label[for='email'] {
+          right: 250px;
+        }
+
+        input[name='email'] {
+          right: 250px;
+        }
+
+        label[for='password'] {
+          right: 75px;
+        }
+
+        input[name='password'] {
+          right: 75px;
+        }
+
+        input[type='submit'] {
+          right: 0;
+          width: 50px;
+        }
+      }
+    }
   }
 }
 
